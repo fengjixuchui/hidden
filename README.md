@@ -30,11 +30,13 @@ Following guide explains how to make a release win32 build
 
 **Installing**
 
-1. Disable a digital signature enforcement on a test machine (bcdedit /set TESTSIGNING ON)
+1. Disable a digital signature enforcement on a test machine (bcdedit /set TESTSIGNING ON) and reboot it
 2. Copy files from **\<ProjectDir\>\Release\Hidden Package** to a test machine
 3. Right mouse click on **Hidden.inf** and choose **Install**
 4. Start a driver (sc start hidden)
 5. Make sure service is running (sc query hidden)
+
+Important: Keep in mind that the driver bitness have to be the same to an OS bitness
 
 **Hiding**
 
